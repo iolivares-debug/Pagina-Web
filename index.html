@@ -162,15 +162,22 @@
             background: #25d366; width: 60px; height: 60px;
             border-radius: 50%; display: flex; align-items: center;
             justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-            text-decoration: none; color: white; font-size: 30px; z-index: 1000;
+            text-decoration: none; color: white; z-index: 1000;
+            transition: transform 0.25s ease;
         }
+        .wsp-float:hover { transform: scale(1.08); }
+        .wsp-float svg { width: 32px; height: 32px; fill: #ffffff; }
 
         footer { text-align: center; padding: 50px; border-top: 1px solid #1a1a1a; font-size: 0.8rem; color: #888; letter-spacing: 3px; }
     </style>
 </head>
 <body>
 
-    <a href="https://wa.me/56997259567" class="wsp-float" target="_blank">W</a>
+    <a href="https://wa.me/56997259567" class="wsp-float" target="_blank" aria-label="Escribir por WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M16.004 3C9.377 3 4 8.377 4 15.004c0 2.353.652 4.552 1.786 6.43L4 29l7.73-1.752a11.94 11.94 0 0 0 4.274.783h.004c6.627 0 12.004-5.377 12.004-12.004C28.012 8.377 22.635 3 16.004 3zm0 21.86h-.003a9.84 9.84 0 0 1-5.02-1.375l-.36-.214-3.708.84.84-3.615-.235-.372a9.83 9.83 0 0 1-1.51-5.264c0-5.444 4.432-9.876 9.878-9.876 2.638 0 5.117 1.028 6.983 2.895a9.812 9.812 0 0 1 2.891 6.986c0 5.444-4.432 9.995-9.756 9.995zm5.404-7.386c-.296-.148-1.75-.864-2.02-.963-.271-.099-.469-.148-.667.148-.198.297-.766.963-.94 1.161-.173.198-.346.223-.642.075-.296-.148-1.25-.46-2.38-1.467-.879-.784-1.473-1.753-1.646-2.05-.173-.297-.018-.457.13-.605.134-.133.297-.347.445-.52.148-.174.198-.298.297-.496.099-.198.05-.372-.025-.52-.075-.148-.667-1.606-.914-2.2-.24-.578-.485-.5-.667-.51-.173-.008-.371-.01-.569-.01a1.093 1.093 0 0 0-.792.372c-.272.297-1.04 1.016-1.04 2.478 0 1.462 1.065 2.875 1.213 3.073.148.198 2.096 3.2 5.08 4.489.71.306 1.263.489 1.695.626.712.227 1.36.195 1.872.118.571-.085 1.75-.716 1.997-1.408.247-.693.247-1.286.173-1.409-.074-.123-.271-.198-.567-.346z"/>
+        </svg>
+    </a>
 
     <header>
         <div class="logo-container">
