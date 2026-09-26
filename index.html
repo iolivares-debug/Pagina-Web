@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iván Olivares | El Contador</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dorado: #c5a059;
+            --dorado-brillo: #e6c885;
+            --fondo: #0f0f0f;
+            --tarjeta: #161616;
+            --texto-principal: #ffffff;
+            --texto-secundario: #e6e6e6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--fondo);
+            color: var(--texto-principal);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ENCABEZADO */
+        header {
+            padding: 60px 20px 40px;
+            text-align: center;
+            /* TRUCO 1: Fondo negro puro en la parte superior para fusionarse con la imagen */
+            background: linear-gradient(to bottom, #000000 0%, #0f0f0f 100%);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        .logo-container {
+            width: 230px;
+            margin: 0 auto 15px;
+            position: relative;
+        }
+
+        /* Logo sin fondo (solo el dorado): sin recorte circular ni sombra de
+           relleno — se funde solo con el negro del header. Un brillo dorado
+           sutil en vez de la sombra negra que tapaba el fondo cuadrado. */
+        .logo-container img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 18px rgba(197, 160, 89, 0.25));
+            transition: transform 0.5s ease;
+        }
+
+        .logo-container img:hover { transform: scale(1.05); }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            color: var(--dorado);
+            font-size: 2.8rem;
+            letter-spacing: 4px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--texto-secundario);
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        /* RESTO DEL DISEÑO (Igual que antes) */
+        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-bottom: 80px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--tarjeta);
+            padding: 40px 25px;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid #222;
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            border-color: var(--dorado);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .card h3 {
+            color: var(--dorado);
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+            padding-bottom: 15px;
+        }
+
+        .card ul { list-style: none; text-align: left; font-size: 0.95rem; color: var(--texto-secundario); }
+        .card ul li { margin-bottom: 12px; padding-left: 15px; position: relative; }
+        .card ul li::before { content: "•"; color: var(--dorado); position: absolute; left: 0; font-weight: bold; }
+
+        .pricing-section {
+            background: #0a0a0a;
+            padding: 80px 20px;
+            border-top: 1px solid #222;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .price-box {
+            border: 1px solid var(--dorado);
+            padding: 50px 30px;
+            border-radius: 4px;
+            text-align: center;
+            background: rgba(18, 18, 18, 0.6);
+            transition: 0.3s;
+        }
+
+        .price-box:hover { background: rgba(30, 30, 30, 0.8); }
+
+        .price-box h4 { font-family: 'Cinzel', serif; color: var(--dorado); font-size: 1.5rem; margin-bottom: 15px; }
+        .price-box .monto { font-size: 2rem; margin-bottom: 10px; font-weight: 600; color: #ffffff; }
+        .price-box .detalle { font-size: 0.95rem; color: var(--texto-secundario); margin-bottom: 30px; }
+
+        .btn-gold {
+            background-color: var(--dorado);
+            color: #000;
+            padding: 14px 35px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .btn-gold:hover { background-color: var(--dorado-brillo); box-shadow: 0 0 20px rgba(197, 160, 89, 0.4); }
+
+        .wsp-float {
+            position: fixed; bottom: 30px; right: 30px;
+            background: #25d366; width: 60px; height: 60px;
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            text-decoration: none; color: white; font-size: 30px; z-index: 1000;
+        }
+
+        footer { text-align: center; padding: 50px; border-top: 1px solid #1a1a1a; font-size: 0.8rem; color: #888; letter-spacing: 3px; }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/56997259567" class="wsp-float" target="_blank">W</a>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo El Contador Iván Olivares">
+        </div>
+        <h1>IVÁN OLIVARES</h1>
+        <p class="tagline">Asesoría Contable, Laboral y Constitución de Empresas</p>
+    </header>
+
+    <div class="container">
+        <div class="services-grid">
+            <div class="card">
+                <h3>Constitución</h3>
+                <ul>
+                    <li>Tu Empresa en un Día</li>
+                    <li>Redacción de Escrituras</li>
+                    <li>Modificación de Sociedades</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Tributario</h3>
+                <ul>
+                    <li>Formulario 29 (Mensual)</li>
+                    <li>Operación Renta F-22</li>
+                    <li>Declaraciones Juradas</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Laboral</h3>
+                <ul>
+                    <li>Contratos y Finiquitos</li>
+                    <li>Liquidaciones de Sueldo</li>
+                    <li>Gestión Previred</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Contabilidad</h3>
+                <ul>
+                    <li>Balances Generales</li>
+                    <li>Estados de Resultados</li>
+                    <li>Conciliación Bancaria</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section class="pricing-section">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--dorado); font-family: 'Cinzel', serif; margin-bottom: 50px;">PLANES MENSUALES</h2>
+            <div class="pricing-grid">
+                <div class="price-box">
+                    <h4>PLAN EMPRENDEDOR</h4>
+                    <div class="monto">1.5 UF / mes</div>
+                    <p class="detalle">Para profesionales independientes y PYMES en etapa inicial.</p>
+                    <a href="https://wa.me/56997259567?text=Hola,%20me%20interesa%20el%20Plan%20Emprendedor." class="btn-gold">Consultar</a>
+                </div>
+                <div class="price-box">
+                    <h4>PLAN EMPRESA PYME</h4>
+                    <div class="monto">3.5 UF / mes</div>
+                    <p class="detalle">Gestión completa de contabilidad, sueldos e impuestos.</p>
+                    <a href="https://wa.me/56997259567?text=Hola,%20me%20interesa%20el%20Plan%20Pyme." class="btn-gold">Consultar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        EL CONTADOR - IVAN OLIVARES | SANTIAGO, CHILE | 2026
+    </footer>
+
+</body>
+</html>
