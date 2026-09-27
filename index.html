@@ -183,6 +183,16 @@
         }
         .btn-gold:hover { background-color: var(--dorado-brillo); box-shadow: 0 0 20px rgba(197, 160, 89, 0.4); }
 
+        .btn-outline { background-color: transparent; color: var(--dorado); border: 1px solid var(--dorado); }
+        .btn-outline:hover { background-color: rgba(197, 160, 89, 0.1); box-shadow: none; }
+
+        .contact-section { padding: 80px 20px; text-align: center; }
+        .contact-text { color: var(--texto-secundario); margin-bottom: 35px; }
+        .contact-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 35px; }
+        .testimonio-invite { color: var(--texto-secundario); font-size: 0.9rem; }
+        .link-gold { color: var(--dorado); text-decoration: underline; }
+        .link-gold:hover { color: var(--dorado-brillo); }
+
         .wsp-float {
             position: fixed; bottom: 30px; right: 30px;
             background: #25d366; width: 60px; height: 60px;
@@ -305,6 +315,23 @@
                     <a href="https://wa.me/56997259567?text=Hola,%20me%20interesa%20el%20Plan%20Pyme." class="btn-gold">Consultar</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-heading">CONTACTO</h2>
+            <p class="contact-text">Escríbeme por el medio que prefieras — respondo directo, sin intermediarios.</p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/56997259567" class="btn-gold" target="_blank">WhatsApp</a>
+                <a href="mailto:iolivares@asesoriaselcontador.cl" class="btn-gold btn-outline">iolivares@asesoriaselcontador.cl</a>
+            </div>
+            <p class="testimonio-invite">
+                ¿Ya trabajamos juntos?
+                <a href="mailto:iolivares@asesoriaselcontador.cl?subject=Mi%20testimonio&body=Cu%C3%A9ntame%20c%C3%B3mo%20fue%20tu%20experiencia%20trabajando%20conmigo%3A%0D%0A%0D%0A"
+                   class="link-gold">Déjame tu testimonio</a>
+                — reviso cada uno antes de publicarlo en la página.
+            </p>
         </div>
     </section>
 
