@@ -114,6 +114,18 @@
         .card ul li { margin-bottom: 12px; padding-left: 15px; position: relative; }
         .card ul li::before { content: "•"; color: var(--dorado); position: absolute; left: 0; font-weight: bold; }
 
+        .section-heading { text-align: center; color: var(--dorado); font-family: 'Cinzel', serif; margin-bottom: 50px; }
+
+        .about-section { max-width: 700px; margin: 0 auto 80px; text-align: center; }
+        .about-text { color: var(--texto-secundario); font-size: 1rem; line-height: 1.8; margin-bottom: 40px; }
+        .about-stats { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; }
+        .stat { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+        .stat-num { font-family: 'Cinzel', serif; color: var(--dorado); font-size: 1.4rem; font-weight: 700; }
+        .stat-label {
+            font-size: 0.75rem; color: var(--texto-secundario); text-transform: uppercase;
+            letter-spacing: 1px; opacity: 0.85;
+        }
+
         .pricing-section {
             background: #0a0a0a;
             padding: 80px 20px;
@@ -223,11 +235,35 @@
                 </ul>
             </div>
         </div>
+
+        <div class="about-section">
+            <h2 class="section-heading">SOBRE MÍ</h2>
+            <p class="about-text">
+                Soy Contador Público y Auditor, dedicado a la contabilidad desde 2015. Cuento con
+                un Diplomado en Gestión y Planificación Tributaria de Thomson Reuters y estoy
+                inscrito en el Colegio de Contadores. Mi compromiso es simple: que tu contabilidad
+                esté siempre al día, para que tú te dediques a hacer crecer tu negocio.
+            </p>
+            <div class="about-stats">
+                <div class="stat">
+                    <span class="stat-num">+10</span>
+                    <span class="stat-label">Años de experiencia</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">CPA</span>
+                    <span class="stat-label">Contador Público y Auditor</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">✓</span>
+                    <span class="stat-label">Colegio de Contadores</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <section class="pricing-section">
         <div class="container">
-            <h2 style="text-align: center; color: var(--dorado); font-family: 'Cinzel', serif; margin-bottom: 50px;">PLANES MENSUALES</h2>
+            <h2 class="section-heading">PLANES MENSUALES</h2>
             <div class="pricing-grid">
                 <div class="price-box">
                     <h4>PLAN EMPRENDEDOR</h4>
