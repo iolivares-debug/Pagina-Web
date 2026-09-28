@@ -101,6 +101,25 @@ Tipografías (Google Fonts, cargadas por `<link>`): **Cinzel** (títulos, serif)
     contacto con más espaciado. El archivo original (`IMG-20250418-WA0004.jpg`) se conserva
     intacto sin tocar.
 
+## Qué se hizo (sesión 2026-09-27, tarde) — textos y planes
+
+Iván trae sugerencias de ChatGPT; se evalúan una por una y se aplica solo lo que él aprueba.
+Criterio que se mantuvo: **títulos de tarjetas de una sola palabra** (Constitución /
+Tributario / Laboral / Contabilidad) — se rechazaron títulos-frase por consistencia.
+
+1. **Planes**: cada tarjeta muestra la misma lista de 7 servicios (✓ dorado incluido,
+   — gris no incluido). Emprendedor (1.5 UF) = solo F-29 + asesoría tributaria, pensado para
+   quien no lleva contabilidad o solo quiere estar al día con el SII. PYME (3.5 UF) = todo
+   menos F-22, DJ y conciliación bancaria; remuneraciones hasta 2 trabajadores, adicional
+   0.3 UF + IVA c/u. Nota al pie: F-22, DJ y conciliación se cotizan aparte.
+   Botones: "Quiero este plan" (el mensaje de WhatsApp ya dice de qué plan viene).
+2. **Tarjetas de servicios**: "Crea tu Empresa en un Día"; Tributario con F-29/F-22 explicados
+   ("Declaración Mensual de Impuestos (F-29)", "Declaración Anual de Renta (F-22)") + Asesoría
+   Tributaria; Contabilidad = Contabilidad Mensual / Balance y Estado de Resultados /
+   Conciliación Bancaria (mismas palabras que en los planes).
+3. Iván **no** quiere textos tipo "información financiera para tomar decisiones" — no hace
+   asesoría financiera.
+
 ## Pendiente / próximos pasos
 
 - [x] ~~Confirmar HTTPS activo~~ — listo el 2026-09-27.
