@@ -34,6 +34,11 @@ verlo en `localhost:8080` mientras se edita.
   redirigen con 301 a https://asesoriaselcontador.cl/). El certificado se había quedado
   trabado (GitHub nunca lo pidió); se destrabó quitando y volviendo a poner el dominio
   personalizado en Settings → Pages. Si algún día vuelve a pasar, ese es el remedio.
+- **Google Search Console**: ✅ conectado el 2026-09-27. La propiedad ya venía verificada
+  (el dominio se había verificado al configurar Google Workspace). Se envió `sitemap.xml`
+  → estado "Correcto". Archivos `sitemap.xml` y `robots.txt` en la raíz del repo; si se
+  agregan páginas nuevas, sumarlas al sitemap y actualizar `<lastmod>`. En 1–2 semanas se
+  puede revisar "Rendimiento" (consultas con que la gente llega) para ajustar textos.
 - **Correo** (Google Workspace, `iolivares@asesoriaselcontador.cl`): intacto, los registros
   MX no se tocaron en ningún momento.
 
