@@ -1,7 +1,7 @@
 # ESTADO.md — Página Web (El Contador — Iván Olivares)
 
 > Léelo al empezar una sesión nueva en este proyecto: dice qué es, dónde quedó, y qué sigue.
-> Última actualización: 2026-09-27.
+> Última actualización: 2026-09-27 (noche).
 
 ## Qué es esto
 
@@ -117,12 +117,26 @@ Tributario / Laboral / Contabilidad) — se rechazaron títulos-frase por consis
    ("Declaración Mensual de Impuestos (F-29)", "Declaración Anual de Renta (F-22)") + Asesoría
    Tributaria; Contabilidad = Contabilidad Mensual / Balance y Estado de Resultados /
    Conciliación Bancaria (mismas palabras que en los planes).
-3. Iván **no** quiere textos tipo "información financiera para tomar decisiones" — no hace
+3. **Descripción Plan PYME**: "Para mantener tu empresa al día, mes a mes, en contabilidad,
+   sueldos e impuestos." (se rechazó "todo lo que necesitas": el plan NO incluye F-22/DJ).
+4. **Sobre mí**: "…que tu contabilidad e impuestos estén siempre al día, explicados de forma
+   clara, para que tú te dediques a hacer crecer tu negocio."
+5. **Encabezado**: "Asesoría Contable, Tributaria, Laboral y Constitución de Empresas" + línea
+   dorada "para emprendedores y PYMES" (clase `.tagline-publico`). Meta description, og:
+   y twitter:description actualizadas con el mismo texto.
+6. Ojo: ChatGPT a veces comenta una versión **cacheada/antigua** de la página — verificar
+   contra el `index.html` actual antes de aplicar lo que sugiere.
+7. Iván **no** quiere textos tipo "información financiera para tomar decisiones" — no hace
    asesoría financiera.
 
 ## Pendiente / próximos pasos
 
 - [x] ~~Confirmar HTTPS activo~~ — listo el 2026-09-27.
+- [ ] **Revisar la ficha de Google (Perfil de Empresa / Google Maps) "El Contador"**: Iván
+      la quiso mostrar el 2026-09-27 pero Google bloquea la consulta automática (y la
+      extensión de Chrome no estaba conectada). Quedó en que mandará **capturas de pantalla**.
+      Revisar: sitio web → https://asesoriaselcontador.cl, categoría, descripción alineada
+      con la página (contable, tributaria, laboral, constitución; emprendedores y PYMES).
 - [ ] **Testimonio real**: cuando llegue el primer correo de un cliente (vía el link "Déjame
       tu testimonio" de la sección Contacto), agregarlo a la sección Testimonios. El
       HTML/CSS de esa sección ya se hizo una vez (ver commit `95c8d73` y su revert
