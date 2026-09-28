@@ -30,10 +30,10 @@ verlo en `localhost:8080` mientras se edita.
   - Todos en modo **"DNS only"** (nube gris, **NO proxied**) — a propósito, para no interferir
     con la emisión del certificado HTTPS de GitHub. No activar el proxy naranja hasta
     confirmar que el candado ya está andando.
-- **HTTPS**: a la fecha de este documento, **todavía pendiente** de que GitHub termine de
-  emitir el certificado (puede tardar horas). Mientras tanto el sitio solo responde en
-  `http://`. Revisar con `curl -I https://asesoriaselcontador.cl/` — cuando responda 200,
-  ya está listo.
+- **HTTPS**: ✅ **activo desde 2026-09-27**, con "Enforce HTTPS" marcado (http:// y www
+  redirigen con 301 a https://asesoriaselcontador.cl/). El certificado se había quedado
+  trabado (GitHub nunca lo pidió); se destrabó quitando y volviendo a poner el dominio
+  personalizado en Settings → Pages. Si algún día vuelve a pasar, ese es el remedio.
 - **Correo** (Google Workspace, `iolivares@asesoriaselcontador.cl`): intacto, los registros
   MX no se tocaron en ningún momento.
 
@@ -103,9 +103,7 @@ Tipografías (Google Fonts, cargadas por `<link>`): **Cinzel** (títulos, serif)
 
 ## Pendiente / próximos pasos
 
-- [ ] **Confirmar HTTPS activo**: `curl -I https://asesoriaselcontador.cl/` debería responder
-      200 (a la fecha de este documento aún no). Una vez confirmado, no hace falta hacer nada
-      más — GitHub lo activa solo.
+- [x] ~~Confirmar HTTPS activo~~ — listo el 2026-09-27.
 - [ ] **Testimonio real**: cuando llegue el primer correo de un cliente (vía el link "Déjame
       tu testimonio" de la sección Contacto), agregarlo a la sección Testimonios. El
       HTML/CSS de esa sección ya se hizo una vez (ver commit `95c8d73` y su revert
@@ -123,7 +121,7 @@ Tipografías (Google Fonts, cargadas por `<link>`): **Cinzel** (títulos, serif)
 - Formulario de contacto más completo (hoy es solo `mailto:`, suficiente para el volumen
   actual pero limitado si crece el tráfico).
 - Testimonios: una vez haya 2-3 reales, pasar de una tarjeta única a una grilla/carrusel.
-- Activar el proxy de Cloudflare (nube naranja) más adelante, una vez confirmado el HTTPS,
+- Activar el proxy de Cloudflare (nube naranja) más adelante (HTTPS ya confirmado),
   si Iván quiere aprovechar cache/protección DDoS — no es urgente para un sitio de este tamaño.
 - Optimizar peso de imágenes si el sitio empieza a sentirse lento (hoy es liviano).
 
