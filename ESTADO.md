@@ -122,6 +122,9 @@ Tributario / Laboral / Contabilidad) — se rechazaron títulos-frase por consis
    ("Declaración Mensual de Impuestos (F-29)", "Declaración Anual de Renta (F-22)") + Asesoría
    Tributaria; Contabilidad = Contabilidad Mensual / Balance y Estado de Resultados /
    Conciliación Bancaria (mismas palabras que en los planes).
+   **Precio en pesos**: bajo cada UF aparece "≈ $X" (y en el trabajador adicional entre
+   paréntesis), calculado en el navegador con la UF del día desde `https://mindicador.cl/api/uf`
+   (script al final de `index.html`, elementos con `data-uf`). Si la API falla, queda vacío.
 3. **Descripción Plan PYME**: "Para mantener tu empresa al día, mes a mes, en contabilidad,
    sueldos e impuestos." (se rechazó "todo lo que necesitas": el plan NO incluye F-22/DJ).
 4. **Sobre mí**: "…que tu contabilidad e impuestos estén siempre al día, explicados de forma
