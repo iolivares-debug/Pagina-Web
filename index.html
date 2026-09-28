@@ -179,7 +179,16 @@
         .price-box h4 { font-family: 'Cinzel', serif; color: var(--dorado); font-size: 1.5rem; margin-bottom: 15px; }
         .price-box .monto { font-size: 2rem; margin-bottom: 2px; font-weight: 600; color: #ffffff; }
         .price-box .mas-iva { font-size: 0.75rem; color: var(--texto-secundario); opacity: 0.7; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 1px; }
-        .price-box .detalle { font-size: 0.95rem; color: var(--texto-secundario); margin-bottom: 30px; }
+        .price-box .detalle { font-size: 0.95rem; color: var(--texto-secundario); margin-bottom: 25px; }
+        .price-box .incluye { list-style: none; text-align: left; margin: 0 auto 30px; max-width: 300px; font-size: 0.92rem; }
+        .price-box .incluye li { display: flex; gap: 12px; align-items: baseline; padding: 9px 0; border-bottom: 1px solid #222; color: var(--texto-secundario); }
+        .price-box .incluye li:last-child { border-bottom: none; }
+        .price-box .incluye .marca { flex: 0 0 16px; text-align: center; color: var(--dorado); font-weight: 700; }
+        .price-box .incluye li.no { color: #6a6a6a; }
+        .price-box .incluye li.no .marca { color: #555; font-weight: 400; }
+        .price-box .incluye small { display: block; font-size: 0.75rem; opacity: 0.75; }
+        .price-box .extra { font-size: 0.8rem; color: var(--dorado-brillo); margin: -15px 0 30px; }
+        .pricing-nota { text-align: center; max-width: 900px; margin: 40px auto 0; font-size: 0.85rem; color: var(--texto-secundario); opacity: 0.75; }
 
         .btn-gold {
             background-color: var(--dorado);
@@ -226,6 +235,7 @@
             .tagline { font-size: 0.95rem; letter-spacing: 1px; }
             .about-stats { gap: 30px; }
             .price-box { padding: 40px 20px; }
+            .pricing-grid { grid-template-columns: 1fr; }
             .wsp-float { width: 54px; height: 54px; bottom: 20px; right: 20px; }
             .wsp-float svg { width: 28px; height: 28px; }
         }
@@ -317,16 +327,36 @@
                     <div class="monto">1.5 UF / mes</div>
                     <p class="mas-iva">Más IVA</p>
                     <p class="detalle">Para profesionales independientes y PYMES en etapa inicial.</p>
+                    <ul class="incluye">
+                        <li><span class="marca">✓</span><span>Declaración F-29 mensual</span></li>
+                        <li><span class="marca">✓</span><span>Asesoría tributaria</span></li>
+                        <li class="no"><span class="marca">—</span><span>Contabilidad mensual</span></li>
+                        <li class="no"><span class="marca">—</span><span>Balance y Estado de Resultados</span></li>
+                        <li class="no"><span class="marca">—</span><span>Liquidaciones de sueldo</span></li>
+                        <li class="no"><span class="marca">—</span><span>Gestión Previred</span></li>
+                        <li class="no"><span class="marca">—</span><span>Contratos y finiquitos</span></li>
+                    </ul>
                     <a href="https://wa.me/56997259567?text=Hola,%20me%20interesa%20el%20Plan%20Emprendedor." class="btn-gold">Consultar</a>
                 </div>
                 <div class="price-box">
                     <h4>PLAN EMPRESA PYME</h4>
                     <div class="monto">3.5 UF / mes</div>
                     <p class="mas-iva">Más IVA</p>
-                    <p class="detalle">Gestión completa de contabilidad, sueldos e impuestos.</p>
+                    <p class="detalle">Contabilidad, remuneraciones e impuestos mensuales.</p>
+                    <ul class="incluye">
+                        <li><span class="marca">✓</span><span>Declaración F-29 mensual</span></li>
+                        <li><span class="marca">✓</span><span>Asesoría tributaria</span></li>
+                        <li><span class="marca">✓</span><span>Contabilidad mensual</span></li>
+                        <li><span class="marca">✓</span><span>Balance y Estado de Resultados</span></li>
+                        <li><span class="marca">✓</span><span>Liquidaciones de sueldo<small>Hasta 2 trabajadores</small></span></li>
+                        <li><span class="marca">✓</span><span>Gestión Previred</span></li>
+                        <li><span class="marca">✓</span><span>Contratos y finiquitos</span></li>
+                    </ul>
+                    <p class="extra">Trabajador adicional: 0.3 UF + IVA c/u</p>
                     <a href="https://wa.me/56997259567?text=Hola,%20me%20interesa%20el%20Plan%20Pyme." class="btn-gold">Consultar</a>
                 </div>
             </div>
+            <p class="pricing-nota">Operación Renta F-22, Declaraciones Juradas y Conciliación bancaria se cotizan por separado.</p>
         </div>
     </section>
 
