@@ -132,11 +132,6 @@ Tributario / Laboral / Contabilidad) — se rechazaron títulos-frase por consis
 ## Pendiente / próximos pasos
 
 - [x] ~~Confirmar HTTPS activo~~ — listo el 2026-09-27.
-- [ ] **Revisar la ficha de Google (Perfil de Empresa / Google Maps) "El Contador"**: Iván
-      la quiso mostrar el 2026-09-27 pero Google bloquea la consulta automática (y la
-      extensión de Chrome no estaba conectada). Quedó en que mandará **capturas de pantalla**.
-      Revisar: sitio web → https://asesoriaselcontador.cl, categoría, descripción alineada
-      con la página (contable, tributaria, laboral, constitución; emprendedores y PYMES).
 - [ ] **Testimonio real**: cuando llegue el primer correo de un cliente (vía el link "Déjame
       tu testimonio" de la sección Contacto), agregarlo a la sección Testimonios. El
       HTML/CSS de esa sección ya se hizo una vez (ver commit `95c8d73` y su revert
